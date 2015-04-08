@@ -78,7 +78,7 @@ public class Main
         return contents.toString();
     }
 
-    private static void write(String contents, File outputFile)
+    /*private static void write(String contents, File outputFile)
     {
         String trimmed = contents.trim().replaceAll(" +", " ").replaceAll("\t", " ");
         try
@@ -92,5 +92,5 @@ public class Main
         {
             e.printStackTrace();
         }
-    }
+    }*/
 }
