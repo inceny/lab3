@@ -1,5 +1,8 @@
 package com.company;
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class Main
 {
     private static String encoding;
@@ -17,6 +20,13 @@ public class Main
 
         String contents = getContents(testFile);
         System.out.print("File contents:\r\n" + contents);
+    }
+
+    public static boolean checkWithRegExp(String userNameString)
+    {
+        Pattern p = Pattern.compile("^[az09_]{3,15}$");
+        Matcher m = p.matcher(userNameString);
+        return m.matches();
     }
 
     static public String getContents(File inputFile)
